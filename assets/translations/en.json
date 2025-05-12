@@ -1,0 +1,69 @@
+{
+    "app": {
+        "name": "Flutter Template",
+        "version": "1.0.0"
+    },
+    "common": {
+        "ok": "OK",
+        "cancel": "Cancel",
+        "save": "Save",
+        "delete": "Delete",
+        "confirm": "Confirm",
+        "continue": "Continue",
+        "skip": "Skip",
+        "next": "Next",
+        "back": "Back",
+        "done": "Done",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "loading": "Loading...",
+        "search": "Search",
+        "noResults": "No results found",
+        "tryAgain": "Try Again"
+    },
+    "onboarding": {
+        "page1": {
+            "title": "Welcome to Flutter Template",
+            "description": "A modern Flutter template with Riverpod, clean architecture, and ShadCN UI."
+        },
+        "page2": {
+            "title": "Fully Customizable",
+            "description": "Easily theme your app with light and dark mode, custom text styles, and colors."
+        },
+        "page3": {
+            "title": "Ready to Go",
+            "description": "Multiple environments, localization support, and organized project structure."
+        }
+    },
+    "home": {
+        "title": "Home",
+        "welcome": "Welcome to your app!",
+        "description": "This template includes everything you need to build a great app"
+    },
+    "settings": {
+        "title": "Settings",
+        "theme": {
+            "title": "Theme",
+            "light": "Light",
+            "dark": "Dark",
+            "system": "System"
+        },
+        "language": {
+            "title": "Language",
+            "english": "English",
+            "vietnamese": "Vietnamese"
+        },
+        "about": {
+            "title": "About",
+            "description": "A Flutter template with Riverpod, clean architecture, ShadCN UI, multiple environments, and localization support.",
+            "version": "Version"
+        }
+    },
+    "errors": {
+        "general": "Something went wrong. Please try again.",
+        "connection": "No internet connection. Please check your network settings.",
+        "timeout": "Request timed out. Please try again.",
+        "notFound": "The requested resource was not found."
+    }
+}

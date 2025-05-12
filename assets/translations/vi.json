@@ -1,0 +1,69 @@
+{
+    "app": {
+        "name": "Flutter Template",
+        "version": "1.0.0"
+    },
+    "common": {
+        "ok": "OK",
+        "cancel": "Hủy",
+        "save": "Lưu",
+        "delete": "Xóa",
+        "confirm": "Xác nhận",
+        "continue": "Tiếp tục",
+        "skip": "Bỏ qua",
+        "next": "Tiếp theo",
+        "back": "Quay lại",
+        "done": "Hoàn thành",
+        "error": "Lỗi",
+        "success": "Thành công",
+        "warning": "Cảnh báo",
+        "loading": "Đang tải...",
+        "search": "Tìm kiếm",
+        "noResults": "Không tìm thấy kết quả",
+        "tryAgain": "Thử lại"
+    },
+    "onboarding": {
+        "page1": {
+            "title": "Chào mừng đến với Flutter Template",
+            "description": "Một mẫu Flutter hiện đại với Riverpod, kiến trúc sạch và ShadCN UI."
+        },
+        "page2": {
+            "title": "Tùy chỉnh hoàn toàn",
+            "description": "Dễ dàng thay đổi giao diện với chế độ sáng và tối, kiểu chữ tùy chỉnh và màu sắc."
+        },
+        "page3": {
+            "title": "Sẵn sàng sử dụng",
+            "description": "Hỗ trợ nhiều môi trường, đa ngôn ngữ và cấu trúc dự án có tổ chức."
+        }
+    },
+    "home": {
+        "title": "Trang chủ",
+        "welcome": "Chào mừng đến với ứng dụng của bạn!",
+        "description": "Mẫu này bao gồm mọi thứ bạn cần để xây dựng một ứng dụng tuyệt vời"
+    },
+    "settings": {
+        "title": "Cài đặt",
+        "theme": {
+            "title": "Giao diện",
+            "light": "Sáng",
+            "dark": "Tối",
+            "system": "Hệ thống"
+        },
+        "language": {
+            "title": "Ngôn ngữ",
+            "english": "Tiếng Anh",
+            "vietnamese": "Tiếng Việt"
+        },
+        "about": {
+            "title": "Thông tin",
+            "description": "Một mẫu Flutter với Riverpod, kiến trúc sạch, ShadCN UI, hỗ trợ nhiều môi trường và đa ngôn ngữ.",
+            "version": "Phiên bản"
+        }
+    },
+    "errors": {
+        "general": "Đã xảy ra lỗi. Vui lòng thử lại.",
+        "connection": "Không có kết nối internet. Vui lòng kiểm tra cài đặt mạng của bạn.",
+        "timeout": "Yêu cầu hết thời gian. Vui lòng thử lại.",
+        "notFound": "Không tìm thấy tài nguyên yêu cầu."
+    }
+}
