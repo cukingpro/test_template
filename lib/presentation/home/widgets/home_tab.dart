@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
+import '../../../config/localization/localization.dart';
+
 class HomeTab extends ConsumerWidget {
   const HomeTab({Key? key}) : super(key: key);
 
@@ -10,7 +12,8 @@ class HomeTab extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('home.title'.tr()),
+        title: Text(LocaleKeys.home_title.tr()),
+        elevation: 0,
       ),
       body: SafeArea(
         child: Padding(
@@ -25,13 +28,15 @@ class HomeTab extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'home.welcome'.tr(),
+                        LocaleKeys.home_welcome.tr(),
                         style: Theme.of(context).textTheme.headlineMedium,
+                        textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'home.description'.tr(),
+                        LocaleKeys.home_description.tr(),
                         style: Theme.of(context).textTheme.bodyLarge,
+                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),

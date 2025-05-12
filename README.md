@@ -99,3 +99,53 @@ Customize your app's theme in `lib/config/theme/app_theme.dart`.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Code Generation
+
+### Localization
+
+This project uses Easy Localization with type-safe translation keys. To generate the keys from translation files, run:
+
+```bash
+# Generate type-safe keys
+flutter pub run easy_localization:generate -f keys -S assets/translations -O lib/generated -o locale_keys.g.dart
+
+# Generate localization loader (optional)
+flutter pub run easy_localization:generate -f json -S assets/translations -O lib/generated -o codegen_loader.g.dart
+```
+
+Usage in code:
+
+```dart
+// Import the generated keys
+import 'package:your_app/generated/locale_keys.g.dart';
+
+// Basic usage
+Text(LocaleKeys.home_title.tr())
+
+// With positional arguments
+Text(LocaleKeys.greeting.tr(args: ['John']))
+
+// With named arguments
+Text(LocaleKeys.welcome.tr(namedArgs: {'name': 'John'}))
+
+// Pluralization
+Text(LocaleKeys.items.tr(args: [itemCount.toString()]))
+
+// Gender-specific translations
+Text(LocaleKeys.pronoun.tr(gender: isMale ? 'male' : 'female'))
+```
+
+Or use our handy script to run both generation steps:
+
+```bash
+./scripts/generate_keys.sh
+```
+
+### Assets
+
+This project uses flutter_gen for type-safe asset access. To generate asset references, run:
+
+```bash
+flutter pub run build_runner build
+```

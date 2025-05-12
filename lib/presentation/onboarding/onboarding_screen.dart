@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../config/router/app_router.dart';
 import '../home/home_screen.dart';
+import '../../config/localization/localization.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
   static const String routeName = 'onboarding';
@@ -97,7 +98,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   // Skip button
                   TextButton(
                     onPressed: _onSkip,
-                    child: Text('common.skip'.tr()),
+                    child: Text(LocaleKeys.common_skip.tr()),
                   ),
 
                   // Pagination indicators
@@ -120,7 +121,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                   ElevatedButton(
                     onPressed: _onNextPage,
                     child: Text(
-                      isLastPage ? 'common.done'.tr() : 'common.next'.tr(),
+                      isLastPage ? LocaleKeys.common_done.tr() : LocaleKeys.common_next.tr(),
                     ),
                   ),
                 ],

@@ -8,6 +8,8 @@ import 'config/router/app_router.dart';
 import 'config/theme/app_theme.dart';
 import 'config/theme/theme_manager.dart';
 import 'core/storage/app_storage.dart';
+import 'generated/locale_keys.g.dart';
+import 'generated/codegen_loader.g.dart';
 
 Future<void> main() async {
   // Ensure Flutter is initialized
@@ -29,6 +31,7 @@ Future<void> main() async {
         supportedLocales: AppLocalization.supportedLocales,
         path: AppLocalization.path,
         fallbackLocale: AppLocalization.fallbackLocale,
+        assetLoader: const CodegenLoader(),
         child: const MyApp(),
       ),
     ),
@@ -56,6 +59,7 @@ Future<void> mainProd() async {
         supportedLocales: AppLocalization.supportedLocales,
         path: AppLocalization.path,
         fallbackLocale: AppLocalization.fallbackLocale,
+        assetLoader: const CodegenLoader(),
         child: const MyApp(),
       ),
     ),
@@ -74,7 +78,7 @@ class MyApp extends ConsumerWidget {
     final themeMode = ref.watch(themeProvider);
 
     return MaterialApp.router(
-      title: 'app.name'.tr(),
+      title: LocaleKeys.app_name.tr(),
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: themeMode,

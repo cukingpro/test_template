@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+export '../../generated/locale_keys.g.dart';
+
 class AppLocalization {
   static const supportedLocales = [
     Locale('en'),

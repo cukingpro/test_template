@@ -1,49 +1,51 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
-import '../home/widgets/home_tab.dart';
-import '../settings/widgets/settings_tab.dart';
+import '../../config/localization/localization.dart';
+import '../settings/settings_screen.dart';
+import 'widgets/home_tab.dart';
 
-class HomeScreen extends ConsumerStatefulWidget {
-  static const String routeName = 'home';
+class HomeScreen extends StatefulWidget {
   static const String routePath = '/home';
+  static const String routeName = 'home';
 
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<HomeScreen> createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends ConsumerState<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-
-  final List<Widget> _tabs = [
-    const HomeTab(),
-    const SettingsTab(),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _tabs[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        items: [
-          BottomNavigationBarItem(
-            icon: const Icon(Icons.home),
-            label: 'home.title'.tr(),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: const [
+          HomeTab(),
+          SettingsScreen(),
+        ],
+      ),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        destinations: [
+          NavigationDestination(
+            icon: const Icon(Icons.home_outlined),
+            selectedIcon: const Icon(Icons.home),
+            label: LocaleKeys.home_title.tr(),
           ),
-          BottomNavigationBarItem(
-            icon: const Icon(Icons.settings),
-            label: 'settings.title'.tr(),
+          NavigationDestination(
+            icon: const Icon(Icons.settings_outlined),
+            selectedIcon: const Icon(Icons.settings),
+            label: LocaleKeys.settings_title.tr(),
           ),
         ],
       ),
