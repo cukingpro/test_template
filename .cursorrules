@@ -275,5 +275,21 @@ lib/core/
 *   **DRY:** Avoid code duplication.
 *   **Prefer Feature-Specific:** Prioritize feature-level placement.
 
+## Code Generation Practices
+
+*   **Auto-Generation:** Always utilize code generation when possible for:
+    *   **Riverpod:** Use riverpod_generator with @riverpod annotations to generate providers
+    *   **Localization:** Use easy_localization or intl packages with their respective generators
+    *   **Assets/Resources:** Use flutter_gen to generate type-safe references to assets
+    *   **Fonts:** Use codegen for font references
+    *   **JSON Serialization:** Use json_serializable for model serialization
+    *   **Route Management:** Use auto_route or go_router with respective code generators
+    *   **Freezed:** Use freezed for immutable models and union types
+    *   **Database Entities:** Use drift, floor, or other ORM generators for database entities
+*   **Generated Code Organization:**
+    *   Generated code should be placed in the same directory as the source file
+    *   Global generated files should be placed in the lib/generated/ directory
+    *   Add generated files to .gitignore pattern with appropriate exclusions
+
 Please adhere to the above content when executing tasks.
 
