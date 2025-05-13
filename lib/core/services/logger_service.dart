@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:logger/logger.dart';
 
-import '../../config/environment/environment.dart';
+import '../config/environment.dart';
 
 class LoggerService {
   static final LoggerService _instance = LoggerService._internal();

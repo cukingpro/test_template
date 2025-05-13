@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../presentation/onboarding/onboarding_screen.dart';
-import '../../core/storage/app_storage.dart';
+import '../../../../features/onboarding/presentation/screens/onboarding_screen.dart';
+import '../../../../core/storage/app_storage.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
   static const String routeName = 'splash';

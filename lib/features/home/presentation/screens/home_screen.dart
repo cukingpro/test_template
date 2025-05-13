@@ -2,9 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../config/localization/localization.dart';
-import '../settings/settings_screen.dart';
-import 'widgets/home_tab.dart';
+import '../../../../core/localization/localization.dart';
+import '../../../../features/settings/presentation/screens/settings_screen.dart';
+import '../widgets/home_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routePath = '/home';

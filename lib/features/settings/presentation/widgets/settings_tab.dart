@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
-import '../../../config/localization/app_localization.dart';
-import '../../../config/theme/theme_manager.dart';
+import '../../../../core/localization/app_localization.dart';
+import '../../../../core/theme/theme_manager.dart';
 
 class SettingsTab extends ConsumerWidget {
   const SettingsTab({Key? key}) : super(key: key);

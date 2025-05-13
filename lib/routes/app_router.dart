@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../core/storage/app_storage.dart';
-import '../../presentation/home/home_screen.dart';
-import '../../presentation/onboarding/onboarding_screen.dart';
-import '../../presentation/settings/settings_screen.dart';
-import '../../presentation/splash/splash_screen.dart';
+import '../core/storage/app_storage.dart';
+import '../features/home/presentation/screens/home_screen.dart';
+import '../features/onboarding/presentation/screens/onboarding_screen.dart';
+import '../features/settings/presentation/screens/settings_screen.dart';
+import '../features/splash/presentation/screens/splash_screen.dart';
 
 // The router notifier instance
 final routerNotifierProvider = Provider<RouterNotifier>((ref) {

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../config/router/app_router.dart';
-import '../home/home_screen.dart';
-import '../../config/localization/localization.dart';
+import '../../../../routes/app_router.dart';
+import '../../../../features/home/presentation/screens/home_screen.dart';
+import '../../../../core/localization/localization.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
   static const String routeName = 'onboarding';

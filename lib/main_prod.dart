@@ -1,5 +1,3 @@
-import 'main.dart' as app;
+import 'main.dart';
 
-void main() {
-  app.mainProd();
-}
+void main() => mainProd();

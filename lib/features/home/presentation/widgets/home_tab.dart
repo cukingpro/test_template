@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
-import '../../../config/localization/localization.dart';
+import '../../../../core/localization/localization.dart';
 
 class HomeTab extends ConsumerWidget {
   const HomeTab({Key? key}) : super(key: key);
