@@ -5,14 +5,14 @@ import 'package:go_router/go_router.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
 import '../../../../routes/app_router.dart';
-import '../../../../features/home/presentation/screens/home_screen.dart';
+import '../../../../features/main/presentation/screens/main_screen.dart';
 import '../../../../core/localization/localization.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
   static const String routeName = 'onboarding';
   static const String routePath = '/onboarding';
 
-  const OnboardingScreen({Key? key}) : super(key: key);
+  const OnboardingScreen({super.key});
 
   @override
   ConsumerState<OnboardingScreen> createState() => _OnboardingScreenState();
@@ -96,8 +96,8 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> with Single
     final routerNotifier = ref.read(routerNotifierProvider);
     routerNotifier.setOnboardingCompleted();
 
-    // Navigate to home screen
-    context.go(HomeScreen.routePath);
+    // Navigate to main screen
+    context.go(MainScreen.routePath);
   }
 
   @override

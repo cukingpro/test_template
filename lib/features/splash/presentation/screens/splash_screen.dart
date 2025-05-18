@@ -3,13 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../features/onboarding/presentation/screens/onboarding_screen.dart';
+import '../../../../features/main/presentation/screens/main_screen.dart';
 import '../../../../core/storage/app_storage.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
   static const String routeName = 'splash';
   static const String routePath = '/splash';
 
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   ConsumerState<SplashScreen> createState() => _SplashScreenState();
@@ -30,7 +31,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
     final bool hasCompletedOnboarding = AppStorage.getBool('hasCompletedOnboarding');
 
     if (hasCompletedOnboarding) {
-      context.go('/home');
+      context.go(MainScreen.routePath);
     } else {
       context.go(OnboardingScreen.routePath);
     }

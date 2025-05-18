@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../core/storage/app_storage.dart';
 import '../features/home/presentation/screens/home_screen.dart';
+import '../features/main/presentation/screens/main_screen.dart';
 import '../features/onboarding/presentation/screens/onboarding_screen.dart';
 import '../features/settings/presentation/screens/settings_screen.dart';
 import '../features/splash/presentation/screens/splash_screen.dart';
@@ -41,6 +42,11 @@ class RouterNotifier extends ChangeNotifier {
           path: OnboardingScreen.routePath,
           name: OnboardingScreen.routeName,
           builder: (context, state) => const OnboardingScreen(),
+        ),
+        GoRoute(
+          path: MainScreen.routePath,
+          name: MainScreen.routeName,
+          builder: (context, state) => const MainScreen(),
         ),
         GoRoute(
           path: HomeScreen.routePath,
