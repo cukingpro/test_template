@@ -22,14 +22,8 @@ class MyApp extends ConsumerWidget {
 
     return ShadApp.custom(
       themeMode: themeMode,
-      theme: ShadThemeData(
-        brightness: Brightness.light,
-        colorScheme: const ShadSlateColorScheme.light(),
-      ),
-      darkTheme: ShadThemeData(
-        brightness: Brightness.dark,
-        colorScheme: const ShadSlateColorScheme.dark(),
-      ),
+      theme: AppTheme.getLightTheme(),
+      darkTheme: AppTheme.getDarkTheme(),
       appBuilder: (context) {
         return MaterialApp.router(
           title: LocaleKeys.app_name.tr(),
