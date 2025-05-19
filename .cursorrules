@@ -112,6 +112,7 @@ markdown
 - **UI/UX design changes (layout, colors, fonts, spacing, etc.) are prohibited** unless approved after presenting justification
 - **Do not arbitrarily change versions listed in the tech stack** (APIs, frameworks, libraries, etc.). If changes are necessary, clearly explain the reason and wait for approval before making any changes
 - **Always utilize Context7 when possible** for fetching library documentation, understanding APIs, and solving implementation challenges
+- **For Flutter projects, prioritize the flutter-shadcn-ui library** for consistent design and well-tested components
 
 ---
 
@@ -124,6 +125,7 @@ markdown
 ## Frontend
 
 - Flutter: ^3.22.0
+- shadcn_ui: ^0.26.0 (Flutter port of Shadcn UI)
 
 ### State Management
 
@@ -290,6 +292,15 @@ lib/core/
     *   Generated code should be placed in the same directory as the source file
     *   Global generated files should be placed in the lib/generated/ directory
     *   Add generated files to .gitignore pattern with appropriate exclusions
+
+## UI Component Library Usage
+
+*   **Flutter Projects:**
+    *   **Use the flutter-shadcn-ui library (shadcn_ui package)** as the primary UI component library
+    *   Follow the Material 3 design system for components not available in shadcn_ui
+    *   Maintain consistent theming by configuring the shadcn_ui ThemeProvider
+    *   Check the shadcn_ui documentation for available components before creating custom solutions
+    *   Customize shadcn_ui components according to project requirements using the provided theming options
 
 Please adhere to the above content when executing tasks.
 
